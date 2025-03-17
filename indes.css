@@ -1,0 +1,195 @@
+body {
+    background-color: rgb(36, 35, 46);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    padding: 16px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+header img {
+    width: 220px;
+    height: 220px;
+    border-radius: 60%;
+    border: 5px solid #35ec07;
+}
+
+.center {
+    text-align: center;
+}
+
+h1 {
+    color: #5BBE42;
+}
+
+.cursos li{
+    margin-bottom: 10px;
+}
+
+.cursos span{
+    color: transparent; 
+    transition: color 0.3s ease-in-out;
+}
+
+.cursos li:hover span{
+    color: white;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+}
+
+footer img:hover  {
+    width: 45px;
+    height: 45px;
+    transition: 0.3s
+}
+
+footer a:hover p {
+    color: #5BBE42;
+    transition: 0.3;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+
+footer a {
+    margin: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-top: 2px;
+}
+
+footer img p:hover{
+    color: #5BBE42;
+    transition: 0.3s;
+}
+
+.conteiner {
+    padding: 0px 50px;
+}
+
+nav a:hover {
+    color: #5BBE42;
+    transition: 0.3s;
+}
+
+ol {
+    list-style-type: disc;
+}
+
+/* painel */
+
+/* .painel {
+    display: none;
+    padding: 20px;
+    border: 2px outset #ccc;
+    margin-top: 10px;
+} */
+
+/* painel */
+.painel {
+    padding: 20px;
+    border: 2px outset #ccc;
+    margin-top: 10px;
+    height: 0;
+    opacity: 0;
+    overflow: hidden; /* Esconde o conteúdo */
+    transition: height 0.5s ease, opacity 0.5s ease;
+    display: block;
+}
+
+.painel.open {
+    height: auto;
+    opacity: 1;
+}
+
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+}
+
+h3{
+    color: white;
+    font-size: 20px;
+}
+
+h3:hover{
+    color: #5BBE42;
+    transition: 0.3s;
+}
+
+.painel a:hover, .painel li:hover{
+    color: #5BBE42;
+    cursor: pointer;
+    font-size:22px ;
+    transition: 0.5;
+}
+
+.painel li {
+    margin-bottom: 15px;
+    list-style-type: none;
+    position: relative;
+    padding-left: 15px;
+}
+
+.painel li::before{
+    content: "*";
+    font-size: 25px;
+    position: absolute;
+    left: 0;
+}
+
+/* contatos */
+
+.painel a{
+    font-size: 20px;
+}
+
+.contato-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgb(105, 96, 96);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(228, 209, 209, 1);
+    text-align: center;
+}
+
+.contato-container p {
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.contato-links a {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.contato-links a:hover {
+    text-decoration: underline;
+    color: blue;
+    font-size: 20px;
+} 
