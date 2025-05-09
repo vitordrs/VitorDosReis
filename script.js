@@ -1,12 +1,3 @@
-// function togglePainel(id) {
-//     var painel = document.getElementById(id);
-//     if (painel.style.display === 'block') {
-//         painel.style.display = 'none';
-//     } else {
-//         painel.style.display = 'block';
-//     }
-// }
-
 function togglePainel(id) {
     var painel = document.getElementById(id);
     
