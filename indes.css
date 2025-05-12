@@ -32,8 +32,13 @@ h1 {
     color: #5BBE42;
 }
 
+.linguagens{
+    list-style: decimal;
+}
+
 .cursos li{
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .cursos span{
@@ -93,15 +98,6 @@ nav a:hover {
 ol {
     list-style-type: disc;
 }
-
-/* painel */
-
-/* .painel {
-    display: none;
-    padding: 20px;
-    border: 2px outset #ccc;
-    margin-top: 10px;
-} */
 
 /* painel */
 .painel {
