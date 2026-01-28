@@ -90,6 +90,11 @@ footer img p:hover{
     padding: 0px 50px;
 }
 
+nav {
+    border-bottom: 1px solid white;
+    margin-bottom: 16px;
+}
+
 nav a:hover {
     color: #5BBE42;
     transition: 0.3s;
