@@ -1,7 +1,16 @@
+/* ================================
+RESET / BASE
+================================ */
+
 body {
     background-color: rgb(36, 35, 46);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }
 
 ul {
@@ -12,16 +21,25 @@ ul {
     padding: 16px;
 }
 
-a {
-    color: white;
-    text-decoration: none;
+ol {
+    list-style-type: disc;
 }
+
+.conteiner {
+    padding: 0px 50px;
+}
+
+
+/* ================================
+HEADER
+================================ */
 
 header img {
     width: 220px;
     height: 220px;
-    border-radius: 60%;
-    border: 5px solid #35ec07;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgb(91, 190, 66);
+    margin: 30px 0;
 }
 
 .center {
@@ -32,6 +50,84 @@ h1 {
     color: #5BBE42;
 }
 
+
+/* ================================
+NAVEGAÇÃO
+================================ */
+
+nav {
+    border-bottom: 3px solid white;
+    margin-bottom: 120px;
+
+    position: sticky;
+    top: 0;
+    background: rgb(36, 35, 46);
+    z-index: 1;
+    transition: box-shadow 0.3s;
+}
+
+nav.scrolled{
+    box-shadow: 0 4px 10px rgba(2, 136, 8, 0.651);
+}
+
+nav a {
+    position: relative;
+}
+
+nav a::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #5BBE42;
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a.ativo::after{
+    width: 100%;
+}
+
+
+/* ================================
+RESPONSIVO NAV
+================================ */
+
+@media (max-width: 768px){
+
+    nav {
+        position: sticky;
+        top: 0;
+        position: relative;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+/* ================================
+STACKS / CURSOS
+================================ */
+
 .linguagens{
     list-style: decimal;
 }
@@ -39,6 +135,7 @@ h1 {
 .cursos li{
     margin-bottom: 10px;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 .cursos span{
@@ -50,68 +147,32 @@ h1 {
     color: white;
 }
 
-footer img {
-    width: 40px;
-    height: 40px;
+
+/* ================================
+CERTIFICADO
+================================ */
+
+.cursos li.certificado{
+    margin-bottom: 10px;
 }
 
-footer img:hover  {
-    width: 45px;
-    height: 45px;
-    transition: 0.3s
-}
-
-footer a:hover p {
-    color: #5BBE42;
-    transition: 0.3;
-}
-
-footer {
-    display: flex;
-    justify-content: center;
+.cursos li.certificado::before{
+    content: "📜";
+    font-size: 18px;
 }
 
 
-footer a {
-    margin: 20px;
-    text-align: center;
-}
+/* ================================
+PAINEL
+================================ */
 
-footer p {
-    margin-top: 2px;
-}
-
-footer img p:hover{
-    color: #5BBE42;
-    transition: 0.3s;
-}
-
-.conteiner {
-    padding: 0px 50px;
-}
-
-nav {
-    border-bottom: 1px solid white;
-    margin-bottom: 16px;
-}
-
-nav a:hover {
-    color: #5BBE42;
-    transition: 0.3s;
-}
-
-ol {
-    list-style-type: disc;
-}
-
-/* painel */
 .painel {
     padding: 20px;
     border: 2px outset #ccc;
     margin-top: 10px;
     height: 0;
     opacity: 0;
-    overflow: hidden; /* Esconde o conteúdo */
+    overflow: hidden;
     transition: height 0.5s ease, opacity 0.5s ease;
     display: block;
 }
@@ -121,6 +182,320 @@ ol {
     opacity: 1;
 }
 
+.painel a:hover,
+.painel li:hover{
+    color: #5BBE42;
+    cursor: pointer;
+    transform: translateX(6px);
+    transition: transform 0.3s;
+}
+
+.painel li {
+    margin-bottom: 15px;
+    list-style-type: none;
+    position: relative;
+    padding-left: 15px;
+}
+
+.painel li::before{
+    content: "*";
+    font-size: 25px;
+    position: absolute;
+    left: 0;
+}
+
+
+/* ================================
+SETAS DOS PAINÉIS
+================================ */
+
+.seta {
+    display: inline-block;
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+.seta.aberta {
+    transform: rotate(90deg);
+}
+
+
+/* ================================
+PROJETOS
+================================ */
+
+.lista-projetos{
+    padding-left:20px;
+}
+
+.projeto{
+    margin-bottom:18px;
+}
+
+.destaque{
+    border:2px solid #5BBE42;
+    padding:20px;
+    border-radius:8px;
+    background:#2f2f3a;
+    box-shadow:0 0 10px rgba(91,190,66,0.3);
+}
+
+.descricao{
+    font-size:14px;
+    color:#bbb;
+    margin:8px 0;
+}
+
+.stack{
+    display:block;
+    font-size:14px;
+    color:#aaa;
+    margin-top:3px;
+}
+
+.links{
+    font-size:14px;
+    margin-top:4px;
+    margin-bottom: 16px;
+}
+
+.links a{
+    color:#5BBE42;
+    text-decoration:none;
+}
+
+.links a:hover{
+    text-decoration:underline;
+}
+
+.nota-projetos{
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.tag{
+    font-size: 12px;
+    background: #5BBE42;
+    color: black;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 8px;
+}
+
+.painel a[href*="github"]::after{
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-image: url("./Img/icons8-github.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 6px;
+}
+
+
+/* ================================
+MODAL CERTIFICADO
+================================ */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
+#frameCertificado {
+    display: block;
+    width: 80%;
+    height: 80%;
+    margin: 5% auto;
+    border: none;
+    background: white;
+}
+
+.fechar {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* ================================
+CONTATO
+================================ */
+
+.contato-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgb(105, 96, 96);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(228, 209, 209, 1);
+    text-align: center;
+}
+
+.contato-container > p {
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.disponivel{
+    margin-top:20px;
+    font-size:16px;
+    color:#bbb;
+    line-height:1.5;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.status::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #5BBE42;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #5BBE42;
+}
+
+
+/* ================================
+CONTATO LINKS
+================================ */
+
+.contato-links{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-top:20px;
+}
+
+.contato-item{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:12px;
+    border-radius:8px;
+    background:#2f2f3a;
+    color:white;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.contato-item i{
+    font-size:22px;
+}
+
+.contato-item:hover{
+    background:#5BBE42;
+    color:black;
+    transform:translateY(-2px);
+}
+
+.fa-linkedin{color:#0077b5;}
+.fa-envelope{color:#068ed8;}
+.fa-whatsapp{color:#25d366;}
+
+
+/* animação */
+
+.contato-item{
+    opacity: 0;
+    transform: translateY(15px);
+    animation: aparecer 0.6s ease forwards;
+}
+
+.contato-item:nth-child(1){ animation-delay: 0.1s; }
+.contato-item:nth-child(2){ animation-delay: 0.2s; }
+.contato-item:nth-child(3){ animation-delay: 0.3s; }
+.contato-item:nth-child(4){ animation-delay: 0.4s; }
+
+@keyframes aparecer{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ================================
+FOOTER
+================================ */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-icons a {
+    margin: 0 20px;
+    text-align: center;
+}
+
+.footer-text {
+    text-align: center;
+    color: #888;
+    margin-top: 10px;
+}
+
+footer a:hover p {
+    color: #5BBE42;
+    transition: 0.3;
+}
+
+
+/* ================================
+BOTÃO VOLTAR AO TOPO
+================================ */
+
+#topo{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background:#76ff54;
+    color:black;
+    border:2px solid black;
+    padding:10px 14px;
+    border-radius:6px;
+    cursor:pointer;
+    opacity:0;
+    pointer-events:none;
+    transition:0.3s;
+}
+
+#topo.show{
+    opacity:1;
+    pointer-events:auto;
+}
+
+#topo:hover{
+    transform:translateY(-3px);
+}
+
+
+/* ================================
+BOTÕES
+================================ */
 
 button {
     background: none;
@@ -138,59 +513,3 @@ h3:hover{
     color: #5BBE42;
     transition: 0.3s;
 }
-
-.painel a:hover, .painel li:hover{
-    color: #5BBE42;
-    cursor: pointer;
-    font-size:22px ;
-    transition: 0.5;
-}
-
-.painel li {
-    margin-bottom: 15px;
-    list-style-type: none;
-    position: relative;
-    padding-left: 15px;
-}
-
-.painel li::before{
-    content: "*";
-    font-size: 25px;
-    position: absolute;
-    left: 0;
-}
-
-/* contatos */
-
-.painel a{
-    font-size: 20px;
-}
-
-.contato-container {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background: rgb(105, 96, 96);
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(228, 209, 209, 1);
-    text-align: center;
-}
-
-.contato-container p {
-    font-size: 20px;
-    color: whitesmoke;
-}
-
-.contato-links a {
-    display: inline-block;
-    margin: 10px;
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-}
-
-.contato-links a:hover {
-    text-decoration: underline;
-    color: blue;
-    font-size: 20px;
-} 
