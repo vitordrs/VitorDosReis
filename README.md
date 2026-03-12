@@ -29,10 +29,13 @@ O site foi desenvolvido com foco em boas práticas de HTML, CSS e JavaScript, al
 - Interface responsiva
 
 ---
+## Preview
 
-## 🌐 Acesse o projeto online
+![Preview do portfólio](./Img/preview.png)
+---
 
-[https://seu-portfolio.vercel.app](https://vitor-dos-reis.vercel.app/)
+🌐 **Projeto online:**  
+👉 [https://seu-portfolio.vercel.app](https://vitor-dos-reis.vercel.app/)
 
 ---
 
