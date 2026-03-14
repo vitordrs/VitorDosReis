@@ -394,6 +394,7 @@ CONTATO LINKS
     color:white;
     font-size:18px;
     transition:0.3s;
+    cursor: pointer;
 }
 
 .contato-item i{

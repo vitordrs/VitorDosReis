@@ -76,11 +76,17 @@ document.addEventListener("keydown", function(event){
 })
 
 // copiar email
-const emailBtn = document.getElementById("copiarEmail");
-    emailBtn.addEventListener("click", () => {
-    navigator.clipboard.writeText("soaresvitor196@gmail.com");
-    emailBtn.textContent = "Email copiado!";            
-    setTimeout(() => {
-        emailBtn.innerHTML = '<i class="fas fa-envelope"></i> E-mail';
-    }, 2000);
-});
+// const emailBtn = document.getElementById("copiarEmail");
+// emailBtn.addEventListener("click", async () => {
+//     try {
+//         await navigator.clipboard.writeText("soaresvitor196@gmail.com");
+//         emailBtn.textContent = "Email copiado!";
+//         setTimeout(() => {
+//             emailBtn.innerHTML = '<i class="fas fa-envelope"></i> E-mail';
+//         }, 2000);
+//     } catch (err) {
+//         console.error('Falha ao copiar email: ', err);
+//         // Fallback: mostrar o email em um alert ou algo
+//         alert('Email: soaresvitor196@gmail.com');
+//     }
+// });
