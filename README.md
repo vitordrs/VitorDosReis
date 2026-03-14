@@ -35,7 +35,7 @@ O site foi desenvolvido com foco em boas práticas de HTML, CSS e JavaScript, al
 ---
 
 🌐 **Projeto online:**  
-👉 [https://seu-portfolio.vercel.app](https://vitor-dos-reis.vercel.app/)
+👉 [Clique aqui](https://vitor-dos-reis.vercel.app/)
 
 ---
 
